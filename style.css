@@ -1,0 +1,373 @@
+/* GENEL STİLLER */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem;
+  }
+  
+  .navbar-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .navbar-brand img {
+    height: 40px;
+    mix-blend-mode: multiply;
+  }
+  
+  .brand-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+  }
+  
+  .menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  
+  .navbar-menu a {
+    text-decoration: none;
+    color: #34495e;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .navbar-menu a:hover {
+    color: #e67e22;
+  }
+  
+  /* BÖLÜMLER */
+  section {
+    padding: 6rem 1.5rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  /* KİTAP KARTLARI */
+  .book-list {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  /* FOTOĞRAF GALERİSİ */
+  .photo-gallery {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .photo-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .photo-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .photo-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Masaüstü: 4 fotoğraf */
+  @media (min-width: 1200px) {
+    .photo-gallery {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* Büyük Masaüstü: 3 fotoğraf */
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    .photo-gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Tablet: 2 fotoğraf */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .photo-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Mobil: 1 fotoğraf */
+  @media (max-width: 767px) {
+    .photo-gallery {
+      grid-template-columns: 1fr;
+      padding: 0 10px;
+    }
+  
+    .photo-image {
+      height: 180px;
+    }
+  }
+  
+  /* Masaüstü: 5 kart */
+  @media (min-width: 1200px) {
+    .book-list {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  /* Büyük Masaüstü: 4 kart */
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    .book-list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* Tablet: 2 kart */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .book-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Mobil: 1 kart */
+  @media (max-width: 767px) {
+    .book-list {
+      grid-template-columns: 1fr;
+      padding: 0 10px;
+    }
+  }
+  
+  .book-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 260px;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .book-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .book-details {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .book-title {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    min-height: 3rem;
+  }
+  
+  .book-meta {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+  }
+  
+  .book-price {
+    font-size: 1.2rem;
+    color: #27ae60;
+    font-weight: 700;
+    margin: 1rem 0;
+  }
+  
+  /* DİĞER BÖLÜMLER */
+  .content-box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+  }
+  
+  #map {
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 1rem;
+  }
+  
+  /* WHATSAPP BUTONU */
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    z-index: 1000;
+  }
+  
+  .whatsapp-btn img {
+    width: 100%;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+  }
+  
+  /* MAĞAZA BUTONLARI */
+  .link-buttons {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+  }
+  
+  .store-btn {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .link-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .nadir-btn {
+    background: #27ae60;
+    color: white;
+    border: 2px solid #219653;
+  }
+  
+  .nadir-btn:hover {
+    background: #219653;
+    transform: translateY(-2px);
+  }
+  
+  /* RESPONSIVE AYARLAR */
+  @media (max-width: 768px) {
+    .store-btn {
+      font-size: 14px;
+      padding: 0.8rem;
+    }
+  }
+  
+  /* RESPONSIVE TASARIM */
+  @media (max-width: 767px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .navbar-menu {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+  
+    .navbar-menu.active {
+      display: flex;
+    }
+  
+    .navbar-menu li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+    }
+  
+    section {
+      padding-top: 5rem;
+    }
+  
+    .content-box {
+      padding: 1.5rem;
+    }
+  
+    #map {
+      height: 300px;
+    }
+  
+    .book-image {
+      height: 180px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .brand-text {
+      font-size: 1rem;
+    }
+  
+    section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .book-price {
+      font-size: 1rem;
+    }
+  
+    .add-to-cart-btn {
+      padding: 0.6rem 1rem;
+    }
+  }
+  

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atılgan Sahaf Kitabevi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <div class="navbar-brand">
+        <img src="/images/logo.jpg" alt="Logo">
+        <span class="brand-text">Atılgan Sahaf & Kitabevi</span>
+      </div>
+      
+      <button class="menu-toggle">☰</button>
+      
+      <ul class="navbar-menu">
+        <li><a href="#hakkimizda">Hakkımızda</a></li>
+        <li><a href="#kitaplarimiz">Kitaplar</a></li>
+        <li><a href="#nadirKitap">Nadir Kitaplar</a></li>
+        <li><a href="#fotograflar">Fotoğraflar</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BÖLÜMLER -->
+  <section id="hakkimizda">
+    <h2>Hakkımızda</h2>
+    <div class="content-box">
+      <p>
+        Merhaba!<br><br>
+        Kullanmadığınız ya da işinize yaramayan kitaplarınızı adresinizden alıyoruz. Kitaplığınızda yer açmak, taşınma sürecinizi kolaylaştırmak veya yeni kitaplar almak için satmak istediğiniz kitapları değerinde alarak yeni okurlarla buluşturuyoruz.<br><br>
+        Roman, akademik yayınlar, araştırma kitapları, çizgi roman, sınav hazırlık kitapları (YKS, ALES, KPSS vb.), dil öğrenme kaynakları ve daha birçok türde kitabı sizden alıyoruz.<br><br>
+        Kitaplarınızı, değersizleştirerek kilo ile alan yerlerin aksine, sahaflık geleneğine uygun olarak titizlikle değerlendiriyoruz. Bu sayede kitaplarınızı gerçek değerinde satmış olursunuz.<br><br>
+        Satmak istediğiniz kitaplar için fiyat almak veya detaylı bilgi edinmek isterseniz bize WhatsApp aracılığıyla ulaşabilirsiniz.<br><br>
+        Tüm kitap dostlarını dükkanımıza bekleriz!
+      </p>
+      <br>
+      <p>Portföyümüzde bulunan daha fazla nadir kitaba aşağıdaki bağlantılardan ulaşabilirsiniz:</p>
+      <div class="link-buttons-container">
+        <div class="link-buttons">
+          <a href="https://www.nadirkitap.com/atilgan-sahaf-kitabevi-sahaf2287009.html" 
+             class="store-btn nadir-btn" 
+             target="_blank">
+            Nadir Kitap Mağazamızı Ziyaret Edin
+          </a>
+        </div>
+        <div class="link-buttons">
+          <a href="https://www.amazon.com.tr/s?me=A2TNRLWMHIUPRW&marketplaceID=A33AVAJ2PDY3EV" 
+             class="store-btn nadir-btn" 
+             target="_blank">
+            Amazon Mağazamızı Ziyaret Edin
+          </a>
+        </div>
+        <div class="link-buttons">
+          <a href="https://yandex.com.tr/harita/org/atilgan_sahaf/178911745151/?ll=32.855397%2C39.920542&z=16" 
+             class="store-btn nadir-btn" 
+             target="_blank">
+            Haritalarda Mağazamızı Puanlayın
+          </a>
+        </div>
+      </div>       
+    </div>
+  </section>
+
+  <section id="kitaplarimiz">
+    <h2>Kitaplar</h2>
+    <div class="book-list" id="bookList"></div>
+  </section>
+
+  <section id="nadirKitap">
+    <h2>Nadir Kitaplar</h2>
+    <div class="book-list" id="rareBookList"></div>
+  </section>
+
+  <section id="fotograflar">
+    <h2>Fotoğraflar</h2>
+    <div class="photo-gallery">
+      <div class="photo-card">
+        <img src="/images/1.jpg" alt="Dükkan Görseli 1" class="photo-image">
+      </div>
+      <div class="photo-card">
+        <img src="/images/2.jpg" alt="Dükkan Görseli 2" class="photo-image">
+      </div>
+      <div class="photo-card">
+        <img src="/images/3.jpg" alt="Dükkan Görseli 3" class="photo-image">
+      </div>
+      <div class="photo-card">
+        <img src="/images/4.jpg" alt="Dükkan Görseli 4" class="photo-image">
+      </div>
+      <!-- Yeni fotoğraflar eklenebilir -->
+    </div>
+  </section>
+
+  <section id="iletisim">
+    <h2>İletişim</h2>
+    <div id="map"></div>
+  </section>
+
+  <!-- WHATSAPP BUTONU -->
+  <a href="https://wa.me/905525844218" class="whatsapp-btn" target="_blank">
+    <img src="/images/whatsapp.png" alt="WhatsApp">
+  </a>
+
+  <script src="script.js"></script>
+  <script src="https://api-maps.yandex.com/2.1/?lang=tr_TR"></script>
+</body>
+</html>
